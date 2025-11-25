@@ -4,17 +4,69 @@
     <meta charset="UTF-8">
     <title>À propos de moi</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background: #2c3e50; padding: 15px; }
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: #f7f7f7;
+        }
+        header { 
+            background: #2c3e50; 
+            padding: 15px; 
+        }
         nav a {
-            color: white; text-decoration: none; margin-right: 20px; font-size: 18px;
+            color: white; 
+            text-decoration: none; 
+            margin-right: 20px; 
+            font-size: 18px;
         }
-        nav a:hover { text-decoration: underline; }
-        .content { padding: 40px; }
-        h1 { color: #2c3e50; }
-        .section {
-            background: #f1f1f1; padding: 20px; border-radius: 8px; margin-bottom: 20px;
+        nav a:hover { 
+            text-decoration: underline; 
         }
+        .content { 
+            padding: 40px; 
+        }
+        h1 { 
+            color: #2c3e50; 
+            margin-bottom: 30px;
+        }
+
+        /* STYLE DES BLOCS PLIABLES */
+        details {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border: 1px solid #dcdcdc;
+        }
+        summary {
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #2c3e50;
+            outline: none;
+        }
+
+        summary:hover {
+            color: #1a242f;
+        }
+
+        details[open] {
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        details p, details ul {
+            margin-top: 15px;
+        }
+
+        footer {
+            background:#2c3e50; 
+            color:white; 
+            padding:20px; 
+            text-align:center; 
+            margin-top:40px;
+        }
+        footer a { color:#f1c40f; }
     </style>
 </head>
 
@@ -31,75 +83,65 @@
 <div class="content">
     <h1>À propos de moi</h1>
 
-    <div class="section">
-        <h2>Qui suis-je ?</h2>
+    <!-- 🔽 SECTION 1 — QUI SUIS-JE ? -->
+    <details>
+        <summary>Qui suis-je ?</summary>
             <p>Diplômée d’un Master 2 en Économie appliquée, parcours Europe, International, Environnement et Développement, une formation exigeante axée sur l’économétrie, la modélisation, l’analyse statistique et la compréhension des enjeux économiques contemporains . Je possède également une solide base en mathématiques, informatique appliquée et analyse de données, acquise dès sa licence en MIASHS.</p>
             <p>Passionnée par la data, je maîtrise un large éventail d’outils techniques tels que SQL, Excel avancé, Python, R, Power BI, MATLAB, STATA, MySQL, QGIS, et je sais aussi bien structurer que analyser, modéliser et visualiser les données. Mes projets académiques couvrent des sujets variés comme l’analyse macroéconomique, les séries temporelles, la modélisation mathématique, la conception d’enquêtes, l’étude de marché et la création de bases de données interactives , démontrant ma polyvalence et ma capacité à mener des analyses complètes, rigoureuses et documentées.</p>
             <p>Curieuse, rigoureuse et autonome, j'excelle dans la collecte, le nettoyage, la structuration et la fiabilisation des données, ainsi que dans la rédaction de rapports clairs à destination de non-spécialistes. Je porte une grande attention à la cohérence, à la qualité et à la traçabilité des données, valeurs essentielles dans les environnements data exigeants.</p>
             <p>Mes expériences en stage notamment en modélisation, analyse économique, étude de marché m'ont permis d’acquérir une réelle aisance dans la communication, la gestion de projet, le travail transversal et la restitution des résultats de manière synthétique et pédagogique.</p>
             <p>Dotée d’un double profil économiste appliquée et analyste de données, je me distingue par ma capacité à combiner compréhension des enjeux économiques, analyse quantitative avancée et compétence technique. Engagée, organisée et motivée, je suis prête à contribuer efficacement aux missions d’analyse, de pilotage ou de gestion des données au sein d’une équipe dynamique.</p>
-    </div>
+    </details>
 
-    <div class="section">
-        <h2>🎓 Mon parcours académique</h2>
-            <p><strong><a href="https://formation.univ-pau.fr/fr/catalogue/master-XB/master-mention-economie-appliquee-L3WSJ23K/m1-commun-m2-parcours-europe-international-environnement-et-developpement-eied-L3WSLGLV.html" target="_blank"> Master Économie Appliquée – Parcours Europe, International, Environnement et Développement (EIED) </a></strong></p>
-            <p>Université de Pau et des Pays de l'Adours.</p>
-            <p>Octobre 2023-Octobre 2025 </p>
-            <p>Formée aux principaux aspects économiques de l'intégration européenne, de la mondialisation et du développement, j'ai acquit une bonne maîtrise des principaux outils techniques d'analyse indispensables à toutes pratiques des métiers d'économiste (économétrie, modélisation, logiciels SAS, GAMS, Mathematica). Je m'appuie sur les axes de recherche de TREE (Transitions Energétiques et Environnementales UMR 6031). J'effectue des analyses économiques, apportant leurs connaissances en économie internationale, européenne et du développement et je maîtrise des outils de modélisation.</p>
+    <!-- 🔽 SECTION 2 — PARCOURS ACADÉMIQUE -->
+    <details>
+        <summary>🎓 Mon parcours académique</summary>
+        <p><strong>Master Économie Appliquée – EIED</strong></p>
+        <p>Université de Pau...</p>
 
-            <p><strong><a href="https://formations.univ-smb.fr/fr/catalogue/master-XB/sciences-technologies-sante-STS/master-mathematiques-et-applications-KGYQPF57/modelisation-mathematique-et-analyse-appliquee-classique-et-alternance-KGYUOV2K.html" target="_blank"> Master 1 Mathématique et application, parcours Modélisation mathématique et analyse appliquée (MMAA) </a></strong></p>
-            <p>Université de Savoie Mont Blanc.</p>
-            <p>Septembre 2021- Juin 2022 </p>
-            <p> J'ai acquit de solides compétences, tant sur le plan théorique que sur le plan pratique en mathématiques, probabilités, analyse et modélisation (aléatoire et déterministe), optimisation, aide à la décision, statistiques, mais avec la nécessité d’une approche pratique et technique.  Mes compétences informatiques en (base de données, C/C++, Matlab, MySQL, PostgreSQL, Python, PHP, R, Python), dans le but de faciliter l'insertion professionnelle.</p>
+        <p><strong>Master 1 Mathématiques – MMAA</strong></p>
+        <p>Université Savoie Mont Blanc...</p>
 
-            <p><strong><a href="https://sciences-technologies.univ-lille.fr/mathematiques/formation/licence-mention-miashs/page"  target="_blank"> Licence MIASHS – Parcours Économie </a></strong></p>
-            <p>Université de Lille.</p>
-            <p>Septembre 2018- Septembre 2021 </p>
-            <p> Je suis préparée à une spécialisation en statistiques, en mathématiques appliquées et en économie</p>
-    </div>
+        <p><strong>Licence MIASHS – Économie</strong></p>
+        <p>Université de Lille...</p>
+    </details>
 
-    <div class="section">
-        <h2>Mes stages</h2>
-            <p><strong>Chargée d'étude économique: Stagiaire</strong></p>
-            <p><a href="https://www.nouvelle-aquitaine.cci.fr/" target="_blank"> Chambre des Commerces et de l'Industrie de la région Nouvelle-Aquitaine </a></p>
-            <p>Mars 2025- Septembre 2025</p>
-            <p>Au sein de la CCI Nouvelle-Aquitaine, j’ai participé aux travaux de veille économique et d’appui au commerce international. J’ai contribué à l’analyse des dynamiques territoriales et sectorielles en mobilisant des données socio-économiques régionales (entreprises, flux commerciaux, attractivité locale). Le stage m’a permis de collecter, structurer et interpréter ces données afin de produire des indicateurs et tableaux de bord destinés à éclairer les décisions d’accompagnement des entreprises. J’ai également contribué à la préparation de notes de synthèse et profils économiques territoriaux, en mettant en lien tissu économique, zones de chalandise et opportunités d’export. Cette expérience m’a donné une première approche concrète de l’analyse territoriale et m’a appris à transformer l’information brute en éléments d’aide à la décision.</p>
+    <!-- 🔽 SECTION 3 — MES STAGES -->
+    <details>
+        <summary>Mes stages</summary>
 
-            <p><strong>Etude de marché : Stagiaire</strong></p>
-            <p><a href="https://apo-oleron.fr/" target="_blank"> Atelier Protégé d'Oléron - ATASH</a></p>
-            <p>Mai 2024- Juin 2024 </p>
-            <p>Au sein d’APO, j’ai participé à la réalisation d’études de marché du secteur de la restauration (Traiteur, repas à domicile et cantines scolaire), l'objectif était de faire un positionnement APO par rapport à ces concurrent. Mon rôle consistait à collecter et structurer des données issues de différentes sources (enquêtes, bases socio-économiques, observation concurrentielle), puis à analyser ces informations afin d’identifier des tendances, des profils de clientèle et des facteurs d’attractivité. J’ai contribué à la rédaction de synthèses et d’enseignements marché permettant d’orienter le positionnement produit et les actions commerciales. Cette expérience m’a initiée à la logique “donnée en insight” et m’a permis de développer une approche analytique au service du besoin métier.</p>
+        <p><strong>Chargée d'étude économique</strong> — CCI Nouvelle-Aquitaine</p>
+        <p>Analyse territoriale, flux commerciaux...</p>
 
-            <p><strong>Modélisation spatiale</strong></p>
-            <p><a href="https://www.visioterra.fr/web/" target="_blank"> Visio Terra</a></p>
-            <p>Mai 2022- Juillet 2022 </p>
-            <p>Recherche des chemins de transumance et modélisation de leur apparition au Tchad</p>
-    </div>
-    
-    <div class="section">
-        <h2>🛠️ Mes compétences</h2>
+        <p><strong>Étude de marché</strong> — APO Oléron</p>
+        <p>Collecte, structuration, synthèse...</p>
+
+        <p><strong>Modélisation spatiale</strong> — Visioterra</p>
+        <p>Chemins de transhumance...</p>
+
+    </details>
+
+    <!-- 🔽 SECTION 4 — COMPÉTENCES -->
+    <details>
+        <summary>🛠️ Mes compétences</summary>
         <ul>
             <li>Analyse de données : Python, R, SQL, Excel</li>
             <li>Économétrie et statistiques</li>
-            <li>Modélisation économique et quantitative (Mathematica)</li>
-            <li>Analyse macroéconomique & finance publique</li>
-            <li>Visualisation : Power BI, Python, Excel, R</li>
+            <li>Modélisation : GAMS, Mathematica</li>
+            <li>Dataviz : Power BI, Python, Excel</li>
             <li>Économie internationale & développement</li>
-            <li>Programmation : Python, R, SQL, GRETL, Matlab</li>
-            <li>gestion de site internet : GITHUB </li>
-
         </ul>
-    </div>
+    </details>
 
 </div>
 
-<footer style="background:#2c3e50; color:white; padding:20px; text-align:center; margin-top:40px;">
+<footer>
     <h3>Contact</h3>
-        <p>Téléphone : +33(0)615090762</p>
-        <p>Email : houmoukande@gmail.com</p>
-        <p>LinkedIn : <a href="https://www.linkedin.com/in/oumou-jasmine-ngwaya-kande-703962185/" target="_blank" style="color:#f1c40f;"> Mon profil LinkedIn </a></p>
-        <p>Localisation : <a href="https://www.bing.com/maps/search?FORM=HDRSC6&q=linthelles&cp=48.713633%7E3.818370&lvl=14.5&style=r" target="_blank" style="color:#f1c40f;"> 51230 Linthelles/Marne/Grand Est/France </a></p>
-        
+    <p>Téléphone : +33(0)615090762</p>
+    <p>Email : houmoukande@gmail.com</p>
+    <p>LinkedIn : <a href="https://www.linkedin.com/in/oumou-jasmine-ngwaya-kande-703962185/" target="_blank">Mon profil LinkedIn</a></p>
+    <p>Localisation : <a href="https://www.bing.com/maps/search?FORM=HDRSC6&q=linthelles&cp=48.713633%7E3.818370&lvl=14.5&style=r" target="_blank">51230 Linthelles, France</a></p>
 </footer>
+
 </body>
 </html>
