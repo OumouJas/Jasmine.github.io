@@ -9,34 +9,46 @@
             font-family: Arial, sans-serif; 
             margin: 0; 
             padding: 0;
-            background-image: url('ChatGPT Image 25 nov. 2025, 14_25_14.png');
+            background-image: url('A_digital_graphic_design_serves_as_a_homepage_bann.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
 
+        /* 🔹 BARRE DE NAVIGATION TRANSPARENTE */
         header { 
-            background: rgba(44, 62, 80, 0.85);
+            background: rgba(44, 62, 80, 0.55); /* Transparence augmentée */
             padding: 15px; 
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(4px); /* effet verre moderne */
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-right: 20px;
             font-size: 18px;
+            font-weight: bold;
         }
 
         nav a:hover { 
             text-decoration: underline; 
         }
 
+        /* 🔹 CADRE CENTRAL */
         .content { 
             padding: 60px;
-            background: rgba(255,255,255,0.8); 
+            background: rgba(255,255,255,0.82); 
             border-radius: 12px;
             max-width: 800px;
-            margin: 80px auto;
+            margin: 100px auto;
+            backdrop-filter: blur(2px);
         }
 
         h1 { 
@@ -48,6 +60,29 @@
             font-size: 18px;
             text-align:center;
         }
+
+        /* 🔹 FOOTER TRANSPARENT & ALIGNÉ */
+        footer {
+            background: rgba(44, 62, 80, 0.55); /* transparence */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .contact-line {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 10px;
+            font-size: 17px;
+        }
+
+        .contact-line a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -56,20 +91,25 @@
 <header>
     <nav>
         <a href="index.html">Accueil</a>
-        <a href="apropos.html">À propos de moi</a>
+        <a href="apropos.html">À propos</a>
         <a href="projets.html">Projets</a>
     </nav>
 </header>
 
 
-<footer style="background:#2c3e50; color:white; padding:20px; text-align:center; margin-top:40px;">
+    
+<footer>
     <h3>Contact</h3>
-        <p>Téléphone : +33(0)615090762</p>
-        <p>Email : houmoukande@gmail.com</p>
-        <p>LinkedIn : <a href="https://www.linkedin.com/in/oumou-jasmine-ngwaya-kande-703962185/" target="_blank" style="color:#f1c40f;"> Mon profil LinkedIn </a></p>
-        <p>Localisation : <a href="https://www.bing.com/maps/search?FORM=HDRSC6&q=linthelles&cp=48.713633%7E3.818370&lvl=14.5&style=r" target="_blank" style="color:#f1c40f;"> 51230 Linthelles/Marne/Grand Est/France </a></p>
-        
+
+    <!-- 🔹 TOUT LE CONTACT EN LIGNE ICI -->
+    <div class="contact-line">
+        <span>📞 +33(0)6 15 09 07 62</span>
+        <span>📧 <a href="mailto:houmoukande@gmail.com">houmoukande@gmail.com</a></span>
+        <span>🔗 <a href="https://www.linkedin.com/in/oumou-jasmine-ngwaya-kande-703962185/" target="_blank">LinkedIn</a></span>
+        <span>📍 <a href="https://www.bing.com/maps/search?FORM=HDRSC6&q=linthelles&cp=48.713633%7E3.818370&lvl=14.5&style=r" target="_blank">51230 Linthelles / Marne / Grand Est / France</a></span>
+    </div>
 </footer>
 
 </body>
 </html>
+
