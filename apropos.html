@@ -3,48 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>À propos de moi</title>
+
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             background: #f7f7f7;
         }
-        header { 
-            background: #2c3e50; 
-            padding: 15px; 
+
+        header {
+            background: #2c3e50;
+            padding: 15px;
         }
+
         nav a {
-            color: white; 
-            text-decoration: none; 
-            margin-right: 20px; 
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
             font-size: 18px;
         }
-        nav a:hover { 
-            text-decoration: underline; 
+
+        nav a:hover {
+            text-decoration: underline;
         }
-        .content { 
-            padding: 40px; 
+
+        .content {
+            padding: 40px;
         }
-        h1 { 
-            color: #2c3e50; 
+
+        h1 {
+            color: #2c3e50;
             margin-bottom: 30px;
         }
 
-        /* STYLE DES BLOCS PLIABLES */
+        /* Style des sections pliables */
         details {
-            background: #ffffff;
+            background: white;
             border-radius: 8px;
             padding: 15px 20px;
             margin-bottom: 20px;
-            border: 1px solid #dcdcdc;
+            border: 1px solid #ddd;
         }
+
         summary {
             font-size: 20px;
             font-weight: bold;
             cursor: pointer;
             color: #2c3e50;
-            outline: none;
         }
 
         summary:hover {
@@ -55,17 +61,14 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
 
-        details p, details ul {
-            margin-top: 15px;
-        }
-
         footer {
-            background:#2c3e50; 
-            color:white; 
-            padding:20px; 
-            text-align:center; 
+            background:#2c3e50;
+            color:white;
+            padding:20px;
+            text-align:center;
             margin-top:40px;
         }
+
         footer a { color:#f1c40f; }
     </style>
 </head>
@@ -83,7 +86,7 @@
 <div class="content">
     <h1>À propos de moi</h1>
 
-    <!-- 🔽 SECTION 1 — QUI SUIS-JE ? -->
+    <!-- SECTION 1 — QUI SUIS-JE -->
     <details>
         <summary>Qui suis-je ?</summary>
             <p>Diplômée d’un Master 2 en Économie appliquée, parcours Europe, International, Environnement et Développement, une formation exigeante axée sur l’économétrie, la modélisation, l’analyse statistique et la compréhension des enjeux économiques contemporains . Je possède également une solide base en mathématiques, informatique appliquée et analyse de données, acquise dès sa licence en MIASHS.</p>
@@ -91,45 +94,87 @@
             <p>Curieuse, rigoureuse et autonome, j'excelle dans la collecte, le nettoyage, la structuration et la fiabilisation des données, ainsi que dans la rédaction de rapports clairs à destination de non-spécialistes. Je porte une grande attention à la cohérence, à la qualité et à la traçabilité des données, valeurs essentielles dans les environnements data exigeants.</p>
             <p>Mes expériences en stage notamment en modélisation, analyse économique, étude de marché m'ont permis d’acquérir une réelle aisance dans la communication, la gestion de projet, le travail transversal et la restitution des résultats de manière synthétique et pédagogique.</p>
             <p>Dotée d’un double profil économiste appliquée et analyste de données, je me distingue par ma capacité à combiner compréhension des enjeux économiques, analyse quantitative avancée et compétence technique. Engagée, organisée et motivée, je suis prête à contribuer efficacement aux missions d’analyse, de pilotage ou de gestion des données au sein d’une équipe dynamique.</p>
+
     </details>
 
-    <!-- 🔽 SECTION 2 — PARCOURS ACADÉMIQUE -->
+    <!-- SECTION 2 — PARCOURS ACADÉMIQUE -->
     <details>
         <summary>🎓 Mon parcours académique</summary>
-        <p><strong>Master Économie Appliquée – EIED</strong></p>
-        <p>Université de Pau...</p>
+        <br>
 
-        <p><strong>Master 1 Mathématiques – MMAA</strong></p>
-        <p>Université Savoie Mont Blanc...</p>
+        <!-- MASTER EIED -->
+        <details>
+            <summary>Master — Économie Appliquée parcours Europe International Environnement et Développement(EIED)</summary>
+                <p><strong><a href="https://formation.univ-pau.fr/fr/catalogue/master-XB/master-mention-economie-appliquee-L3WSJ23K/m1-commun-m2-parcours-europe-international-environnement-et-developpement-eied-L3WSLGLV.html" target="_blank"> Université de Pau et des Pays de l’Adour</a></strong></p>
+                <p>Octobre 2023 – Octobre 2025</p>
+                <p>Formée aux principaux aspects économiques de l'intégration européenne, de la mondialisation et du développement, j'ai acquis une bonne maîtrise des principaux outils techniques d'analyse indispensables à toutes pratiques des métiers d'économiste (économétrie, modélisation, logiciels SAS, GAMS, Mathematica). Je m'appuie sur les axes de recherche de TREE (Transitions Energétiques et Environnementales UMR 6031). J'effectue des analyses économiques, apportant leurs connaissances en économie internationale, européenne et du développement et je maîtrise des outils de modélisation.</p>
+                <p>Outils : Mathematica, Python, R, SQL.</p>
+        </details>
 
-        <p><strong>Licence MIASHS – Économie</strong></p>
-        <p>Université de Lille...</p>
+        <br>
+
+        <!-- MASTER 1 MMAA -->
+        <details>
+            <summary>Master 1 — Mathématiques et Applications (MMAA)</summary>
+            <p><strong>Université Savoie Mont Blanc</strong></p>
+            <p>2021 – 2022</p>
+            <p>Modélisation (déterministe et aléatoire), probabilités, optimisation, statistiques.</p>
+            <p>Techniques : Python, R, Matlab, C/C++, MySQL, PostgreSQL.</p>
+        </details>
+
+        <br>
+
+        <!-- LICENCE MIASHS -->
+        <details>
+            <summary>Licence MIASHS — Parcours Économie</summary>
+            <p><strong>Université de Lille</strong></p>
+            <p>2018 – 2021</p>
+            <p>Statistiques, économie, mathématiques appliquées, informatique et data.</p>
+        </details>
+
     </details>
 
-    <!-- 🔽 SECTION 3 — MES STAGES -->
+    <!-- SECTION 3 — MES STAGES -->
     <details>
         <summary>Mes stages</summary>
+        <br>
 
-        <p><strong>Chargée d'étude économique</strong> — CCI Nouvelle-Aquitaine</p>
-        <p>Analyse territoriale, flux commerciaux...</p>
+        <!-- STAGE CCI -->
+        <details>
+            <summary>Chargée d’étude économique — CCI Nouvelle-Aquitaine</summary>
+            <p>Analyse territoriale, dynamiques sectorielles, commerce international.</p>
+            <p>Production d’indicateurs, tableaux de bord, notes économiques.</p>
+        </details>
 
-        <p><strong>Étude de marché</strong> — APO Oléron</p>
-        <p>Collecte, structuration, synthèse...</p>
+        <br>
 
-        <p><strong>Modélisation spatiale</strong> — Visioterra</p>
-        <p>Chemins de transhumance...</p>
+        <!-- STAGE APO -->
+        <details>
+            <summary>Étude de marché — Atelier Protégé d’Oléron (APO)</summary>
+            <p>Collecte de données, observation concurrentielle, rédaction de synthèses.</p>
+            <p>Analyse du secteur de la restauration et positionnement de l’entreprise.</p>
+        </details>
+
+        <br>
+
+        <!-- STAGE VISION TERRA -->
+        <details>
+            <summary>Modélisation spatiale — Visioterra</summary>
+            <p>Recherche et modélisation des chemins de transhumance au Tchad.</p>
+        </details>
 
     </details>
 
-    <!-- 🔽 SECTION 4 — COMPÉTENCES -->
+    <!-- SECTION 4 — COMPÉTENCES -->
     <details>
         <summary>🛠️ Mes compétences</summary>
         <ul>
             <li>Analyse de données : Python, R, SQL, Excel</li>
             <li>Économétrie et statistiques</li>
             <li>Modélisation : GAMS, Mathematica</li>
-            <li>Dataviz : Power BI, Python, Excel</li>
+            <li>Datavisualisation : Power BI, Python, Excel</li>
             <li>Économie internationale & développement</li>
+            <li>Programmation : Python, R, SQL, Matlab, GRETL</li>
         </ul>
     </details>
 
@@ -139,8 +184,16 @@
     <h3>Contact</h3>
     <p>Téléphone : +33(0)615090762</p>
     <p>Email : houmoukande@gmail.com</p>
-    <p>LinkedIn : <a href="https://www.linkedin.com/in/oumou-jasmine-ngwaya-kande-703962185/" target="_blank">Mon profil LinkedIn</a></p>
-    <p>Localisation : <a href="https://www.bing.com/maps/search?FORM=HDRSC6&q=linthelles&cp=48.713633%7E3.818370&lvl=14.5&style=r" target="_blank">51230 Linthelles, France</a></p>
+    <p>LinkedIn : 
+        <a href="https://www.linkedin.com/in/oumou-jasmine-ngwaya-kande-703962185/" target="_blank">
+            Mon profil LinkedIn
+        </a>
+    </p>
+    <p>Localisation :
+        <a href="https://www.bing.com/maps/" target="_blank">
+            51230 Linthelles — France
+        </a>
+    </p>
 </footer>
 
 </body>
