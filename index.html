@@ -13,15 +13,20 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+
+            /* POUR GARDER LE FOOTER EN BAS */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         /* 🔹 BARRE DE NAVIGATION TRANSPARENTE */
         header { 
-            background: rgba(44, 62, 80, 0.55); /* Transparence augmentée */
+            background: rgba(44, 62, 80, 0.55);
             padding: 15px; 
             position: sticky;
             top: 0;
-            backdrop-filter: blur(4px); /* effet verre moderne */
+            backdrop-filter: blur(4px);
         }
 
         nav {
@@ -47,8 +52,11 @@
             background: rgba(255,255,255,0.82); 
             border-radius: 12px;
             max-width: 800px;
-            margin: 100px auto;
+            margin: 80px auto;
             backdrop-filter: blur(2px);
+            
+            /* POUR POUSSER LE FOOTER EN BAS */
+            flex: 1;
         }
 
         h1 { 
@@ -63,11 +71,12 @@
 
         /* 🔹 FOOTER TRANSPARENT & ALIGNÉ */
         footer {
-            background: rgba(44, 62, 80, 0.55); /* transparence */
+            background: rgba(44, 62, 80, 0.55);
             color: white;
             padding: 20px;
             text-align: center;
             backdrop-filter: blur(4px);
+            margin-top: 20px;
         }
 
         .contact-line {
@@ -96,18 +105,25 @@
     </nav>
 </header>
 
+<!-- ⭐⭐ CONTENU D'ACCUEIL ⭐⭐ -->
+<div class="content">
+    <h1>Économie & Data pour comprendre et agir</h1>
+    <p>Je suis Oumou Jasmine, économiste appliquée et analyste de données.<br>
+    Explorez mes projets, mon parcours et mes analyses.</p>
+</div>
 
-    
-<footer style="background:#2c3e50; color:white; padding:20px; text-align:center; margin-top:40px;">
+<!-- ⭐⭐ FOOTER ⭐⭐ -->
+<footer>
     <h3>Contact</h3>
-        <p>Téléphone : +33(0)615090762
-        Email : houmoukande@gmail.com
-        LinkedIn : <a href="https://www.linkedin.com/in/oumou-jasmine-ngwaya-kande-703962185/" target="_blank" style="color:#f1c40f;"> Mon profil LinkedIn </a>
-        Localisation : <a href="https://www.bing.com/maps/search?FORM=HDRSC6&q=linthelles&cp=48.713633%7E3.818370&lvl=14.5&style=r" target="_blank" style="color:#f1c40f;"> 51230 Linthelles/Marne/Grand Est/France </a></p>
-        
-</footer>
 
+    <!-- Contact en ligne -->
+    <div class="contact-line">
+        <span>📞 +33(0)6 15 09 07 62</span>
+        <span>📧 <a href="mailto:houmoukande@gmail.com">houmoukande@gmail.com</a></span>
+        <span>🔗 <a href="https://www.linkedin.com/in/oumou-jasmine-ngwaya-kande-703962185/" target="_blank">LinkedIn</a></span>
+        <span>📍 <a href="https://www.bing.com/maps/search?FORM=HDRSC6&q=linthelles" target="_blank">Linthelles (51), France</a></span>
+    </div>
+</footer>
 
 </body>
 </html>
-
