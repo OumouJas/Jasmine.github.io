@@ -5,101 +5,83 @@
     <title>Projets</title>
 
     <style>
-        body { 
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background: #f7f7f7;
         }
 
-        /* NAVBAR */
-        header { 
+        header {
             background: #2c3e50;
-            padding: 15px; 
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
+            padding: 15px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
+            margin-right: 20px;
             font-size: 18px;
-            font-weight: bold;
         }
 
-        nav a:hover { text-decoration: underline; }
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-        /* CONTENU CENTRAL */
         .content {
             padding: 40px;
-            background: #fff;
-            border-radius: 12px;
-            max-width: 900px;
-            margin: 60px auto;
         }
 
-        h1 { 
+        h1 {
             color: #2c3e50;
-            text-align: center;
+            margin-bottom: 30px;
         }
 
-        /* TITRE SECTION NON PLIABLE */
-        .section {
-            background: #f1f1f1; 
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        /* SECTIONS PLIABLES */
+        /* --- STYLE IDENTIQUE À LA PAGE APROPOS --- */
         details {
-            background: #f1f1f1;
-            padding: 15px 20px;
+            background: white;
             border-radius: 8px;
-            margin-bottom: 15px;
-            cursor: pointer;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
         }
 
         summary {
             font-size: 20px;
             font-weight: bold;
-            color: #2c3e50;
             cursor: pointer;
-            outline: none;
+            color: #2c3e50;
         }
 
-        /* PROJETS INTERNES (pliables dans pliables) */
+        summary:hover {
+            color: #1a242f;
+        }
+
+        details[open] {
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Sous-projets (pliables dans pliables) */
         .subproject {
-            background: #ffffff;
+            margin-left: 20px;
+            margin-top: 15px;
             border: 1px solid #ddd;
-            padding: 15px;
-            margin: 10px 0;
             border-radius: 6px;
+            padding: 12px 15px;
+            background: #fafafa;
         }
 
         .subproject summary {
             font-size: 17px;
         }
 
-        .subproject p {
-            margin-top: 10px;
-        }
-
         .pdf-link {
-            display: block;
             margin-top: 8px;
+            display: block;
             font-weight: bold;
             color: #2c3e50;
         }
 
-        /* FOOTER */
         footer {
             background: #2c3e50;
             color: white;
@@ -111,15 +93,16 @@
         .contact-line {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 40px;
             flex-wrap: wrap;
+            font-size: 17px;
         }
 
         .contact-line a {
             color: #f1c40f;
             text-decoration: none;
         }
-
     </style>
 </head>
 
@@ -128,7 +111,7 @@
 <header>
     <nav>
         <a href="index.html">Accueil</a>
-        <a href="apropos.html">À propos</a>
+        <a href="apropos.html">À propos de moi</a>
         <a href="projets.html">Projets</a>
     </nav>
 </header>
@@ -137,54 +120,92 @@
     <h1>Mes projets</h1>
 
     <!-- SECTION 1 — NON PLIABLE -->
-    <div class="section">
-        <h2>Ce que je fais comme projets</h2>
-        <p>
-            Dans cette page, vous trouverez mes différents travaux classés par catégories :
-            analyses statistiques, projets économétriques, travaux économiques, études 
-            originales et mémoires. Chaque catégorie est pliable pour une meilleure 
-            lisibilité, et chaque projet contient une description et un lien vers le document associé.
-        </p>
+    <div style="
+        background:white;
+        border-radius:8px;
+        padding:20px;
+        border:1px solid #ddd;
+        margin-bottom:20px;">
+        
+        <h2 style="margin-top:0; color:#2c3e50;">Présentation générale</h2>
+        <p>Dans cette page, vous trouverez mes différents travaux classés par catégories : 
+        analyses, projets économétriques, projets de data science, travaux thématiques, 
+        ainsi que mes mémoires. Chaque partie est pliable pour faciliter la lecture.</p>
     </div>
 
-    <!-- SECTION 2 — PROJETS ANALYTIQUES -->
+    <!-- SECTION 2 -->
     <details>
-        <summary>📊 Projets analytiques</summary>
+        <summary>Projets analytiques</summary>
 
         <details class="subproject">
             <summary>Bilan socio-économique de la LGV Rhin-Rhône</summary>
-            <p>Analyse des documents de la ligne grande vitesse Rhin-Rhône branche Est et construction d’un bilan socio-économique complet.</p>
+            <p>
+                Analyse des documents du projet de la LGV Rhin-Rhône branche Est.
+                Construction d’un bilan socio-économique complet.
+            </p>
 
-            <a class="pdf-link" href="Présentation_LGV_Rhin_Rhone.pdf" target="_blank">📄 Présentation du projet</a>
-            <a class="pdf-link" href="Documents/LGV-Rhin-Rhone-Branche-Est_Projet-Bilan-Socio-Economiques_NGWAYA-KANDE-OUMOU-JASMINE.pdf" target="_blank">📘 Rapport complet</a>
+            <!-- LES LIENS SERONT CORRIGÉS QUAND TU ME DONNES LE BON CHEMIN -->
+            <a class="pdf-link" href="#" target="_blank">Présentation du projet (PDF)</a>
+            <a class="pdf-link" href="#" target="_blank">Rapport complet (PDF)</a>
         </details>
 
         <details class="subproject">
-            <summary>Étude sur le “Grand Remplacement”</summary>
-            <p>Travail réalisé avec Hugo Suscosse. Étude économétrique utilisant les modèles ARIMA, ARIMAX, ARMA et SARIMAX. Analyse approfondie des facteurs démographiques et historiques, suivie d’un volet IA (LSTM/GRU).</p>
+            <summary>Le “Grand Remplacement” — Analyse économétrique</summary>
+            <p>
+                Travail réalisé avec Hugo Suscosse. Analyse des séries temporelles 
+                et construction de modèles ARIMA, ARIMAX, SARIMAX, puis IA (LSTM/GRU).
+            </p>
 
-            <a class="pdf-link" href="Documents/Projet économétrique Le grand remplacement HS et OJNK.pdf" target="_blank">📄 Lire l’étude</a>
-            <a class="pdf-link" href="Documents/Serie temporelle 2000-2021.xlsx" target="_blank">📊 Télécharger les données</a>
+            <a class="pdf-link" href="#" target="_blank">Étude complète (PDF)</a>
+            <a class="pdf-link" href="#" target="_blank">Données utilisées (Excel)</a>
         </details>
 
     </details>
 
-    <!-- SECTION 3 — PROJETS HORS CADRE -->
+    <!-- SECTION 3 -->
     <details>
-        <summary>🚀 Projets “hors cadre”</summary>
+        <summary>Projets économiques</summary>
+
+        <details class="subproject">
+            <summary>Commerce international USA-Chine</summary>
+            <p>Analyse économétrique via modèle gravitaire.</p>
+
+            <a class="pdf-link" href="#" target="_blank">Rapport (PDF)</a>
+        </details>
+
+    </details>
+
+    <!-- SECTION 4 -->
+    <details>
+        <summary>Projets hors cadre</summary>
 
         <details class="subproject">
             <summary>Les cartes de crédit</summary>
-            <p>Étude simple et vulgarisée présentant les avantages et inconvénients des cartes de crédit.</p>
+            <p>Analyse vulgarisée : avantages et inconvénients.</p>
 
-            <a class="pdf-link" href="Documents/carte de credit.pdf" target="_blank">📄 Voir le projet</a>
+            <a class="pdf-link" href="#" target="_blank">Voir le projet (PDF)</a>
         </details>
+
+    </details>
+
+    <!-- SECTION 5 -->
+    <details>
+        <summary>Mémoires</summary>
+
+        <details class="subproject">
+            <summary>Mémoire de Master</summary>
+            <p>Résultats, analyses, méthodologie, modèles…</p>
+
+            <a class="pdf-link" href="#" target="_blank">Lire le mémoire (PDF)</a>
+        </details>
+
     </details>
 
 </div>
 
 <footer>
     <h3>Contact</h3>
+
     <div class="contact-line">
         <span>📞 +33(0)6 15 09 07 62</span>
         <span>📧 <a href="mailto:houmoukande@gmail.com">houmoukande@gmail.com</a></span>
