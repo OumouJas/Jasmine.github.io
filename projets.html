@@ -5,84 +5,121 @@
     <title>Projets</title>
 
     <style>
-        body {
+        body { 
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background: #f7f7f7;
         }
 
-        header {
+        /* NAVBAR */
+        header { 
             background: #2c3e50;
-            padding: 15px;
+            padding: 15px; 
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-right: 20px;
             font-size: 18px;
+            font-weight: bold;
         }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+        nav a:hover { text-decoration: underline; }
 
+        /* CONTENU CENTRAL */
         .content {
             padding: 40px;
+            background: #fff;
+            border-radius: 12px;
+            max-width: 900px;
+            margin: 60px auto;
         }
 
-        h1 {
+        h1 { 
             color: #2c3e50;
-            margin-bottom: 30px;
+            text-align: center;
         }
 
-        /* Style des sections pliables */
-        details {
-            background: white;
+        /* TITRE SECTION NON PLIABLE */
+        .section {
+            background: #f1f1f1; 
+            padding: 20px;
             border-radius: 8px;
-            padding: 15px 20px;
             margin-bottom: 20px;
-            border: 1px solid #ddd;
+        }
+
+        /* SECTIONS PLIABLES */
+        details {
+            background: #f1f1f1;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            cursor: pointer;
         }
 
         summary {
             font-size: 20px;
             font-weight: bold;
+            color: #2c3e50;
             cursor: pointer;
+            outline: none;
+        }
+
+        /* PROJETS INTERNES (pliables dans pliables) */
+        .subproject {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+        }
+
+        .subproject summary {
+            font-size: 17px;
+        }
+
+        .subproject p {
+            margin-top: 10px;
+        }
+
+        .pdf-link {
+            display: block;
+            margin-top: 8px;
+            font-weight: bold;
             color: #2c3e50;
         }
 
-        summary:hover {
-            color: #1a242f;
-        }
-
-        details[open] {
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-
+        /* FOOTER */
         footer {
-        background: #2c3e50;
-        color: white;
-        padding: 20px;
-        text-align: center;
-        backdrop-filter: blur(4px);
-        margin-top: 40px;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
         }
 
         .contact-line {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        flex-wrap: wrap;
-        font-size: 17px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
         }
 
         .contact-line a {
-        color: #f1c40f;
-        text-decoration: none;
+            color: #f1c40f;
+            text-decoration: none;
         }
+
     </style>
 </head>
 
@@ -91,111 +128,63 @@
 <header>
     <nav>
         <a href="index.html">Accueil</a>
-        <a href="apropos.html">À propos de moi</a>
+        <a href="apropos.html">À propos</a>
         <a href="projets.html">Projets</a>
     </nav>
 </header>
 
 <div class="content">
-    <h1>Projets d'analyse et d'économie</h1>
+    <h1>Mes projets</h1>
 
-    <!-- SECTION 1 — QUI SUIS-JE -->
+    <!-- SECTION 1 — NON PLIABLE -->
+    <div class="section">
+        <h2>Ce que je fais comme projets</h2>
+        <p>
+            Dans cette page, vous trouverez mes différents travaux classés par catégories :
+            analyses statistiques, projets économétriques, travaux économiques, études 
+            originales et mémoires. Chaque catégorie est pliable pour une meilleure 
+            lisibilité, et chaque projet contient une description et un lien vers le document associé.
+        </p>
+    </div>
+
+    <!-- SECTION 2 — PROJETS ANALYTIQUES -->
     <details>
-        <summary>De quels projets s'agit-il ?</summary>
-            <p> Projet d'analyse de données d'économie et quelques effets personnelles</p>
+        <summary>📊 Projets analytiques</summary>
 
-    </details>
+        <details class="subproject">
+            <summary>Bilan socio-économique de la LGV Rhin-Rhône</summary>
+            <p>Analyse des documents de la ligne grande vitesse Rhin-Rhône branche Est et construction d’un bilan socio-économique complet.</p>
 
-    <!-- SECTION 2 — PARCOURS ACADÉMIQUE -->
-    <details>
-        <summary>Mon parcours académique</summary>
-        <br>
-
-        <!-- MASTER EIED -->
-        <details>
-            <summary>Master Économie Appliquée parcours Europe International Environnement et Développement(EIED)</summary>
-                <p><strong><a href="https://formation.univ-pau.fr/fr/catalogue/master-XB/master-mention-economie-appliquee-L3WSJ23K/m1-commun-m2-parcours-europe-international-environnement-et-developpement-eied-L3WSLGLV.html" target="_blank"> Université de Pau et des Pays de l’Adour</a></strong></p>
-                <p>Octobre 2023 – Octobre 2025</p>
-                <p>Formée aux principaux aspects économiques de l'intégration européenne, de la mondialisation et du développement, j'ai acquis une bonne maîtrise des principaux outils techniques d'analyse indispensables à toutes pratiques des métiers d'économiste (économétrie, modélisation, logiciels SAS, GAMS, Mathematica). Je m'appuie sur les axes de recherche de TREE (Transitions Energétiques et Environnementales UMR 6031). J'effectue des analyses économiques, apportant leurs connaissances en économie internationale, européenne et du développement et je maîtrise des outils de modélisation.</p>
-                <p>Outils : Mathematica, Python, R, SQL.</p>
+            <a class="pdf-link" href="Documents/Présentation_LGV_Rhin_Rhone.pdf" target="_blank">📄 Présentation du projet</a>
+            <a class="pdf-link" href="Documents/LGV-Rhin-Rhone-Branche-Est_Projet-Bilan-Socio-Economiques_NGWAYA-KANDE-OUMOU-JASMINE.pdf" target="_blank">📘 Rapport complet</a>
         </details>
 
-        <br>
+        <details class="subproject">
+            <summary>Étude sur le “Grand Remplacement”</summary>
+            <p>Travail réalisé avec Hugo Suscosse. Étude économétrique utilisant les modèles ARIMA, ARIMAX, ARMA et SARIMAX. Analyse approfondie des facteurs démographiques et historiques, suivie d’un volet IA (LSTM/GRU).</p>
 
-        <!-- MASTER 1 MMAA -->
-        <details>
-            <summary>Master 1 Mathématique et application, parcours Modélisation mathématique et analyse appliquée (MMAA)</summary>
-            <p><strong><a href="https://formations.univ-smb.fr/fr/catalogue/master-XB/sciences-technologies-sante-STS/master-mathematiques-et-applications-KGYQPF57/modelisation-mathematique-et-analyse-appliquee-classique-et-alternance-KGYUOV2K.html" target="_blank"> Université Savoie Mont Blanc</a></strong></p>
-            <p>Septembre 2021 – Juin 2022</p>
-            <p>J'ai acquis de solides compétences, tant sur le plan théorique que sur le plan pratique en mathématiques, probabilités, analyse et modélisation (aléatoire et déterministe), optimisation, aide à la décision, statistiques, mais avec la nécessité d’une approche pratique et technique.  Mes compétences informatiques en (base de données, C/C++, Matlab, MySQL, PostgreSQL, Python, PHP, R, Python), dans le but de faciliter l'insertion professionnelle. </p>
-            <p>Techniques : Python, R, Matlab, C/C++, MySQL, PostgreSQL.</p>
-        </details>
-
-        <br>
-
-        <!-- LICENCE MIASHS -->
-        <details>
-            <summary>Licence Mathématique Informatiques Appliquées aux Sciences Humaines et Sociales (MIASHS) — Parcours Économie</summary>
-            <p><strong><a href="https://sciences-technologies.univ-lille.fr/mathematiques/formation/licence-mention-miashs/page"  target="_blank"> Université de Lille</a></strong></p>
-            <p>Septembre 2018 – Juin 2021</p>
-            <p>Statistiques, économie, mathématiques appliquées, informatique et data.</p>
+            <a class="pdf-link" href="Documents/Projet économétrique Le grand remplacement HS et OJNK.pdf" target="_blank">📄 Lire l’étude</a>
+            <a class="pdf-link" href="Documents/Serie temporelle 2000-2021.xlsx" target="_blank">📊 Télécharger les données</a>
         </details>
 
     </details>
 
-    <!-- SECTION 3 — MES STAGES -->
+    <!-- SECTION 3 — PROJETS HORS CADRE -->
     <details>
-        <summary>Mes stages</summary>
-        <br>
+        <summary>🚀 Projets “hors cadre”</summary>
 
-        <!-- STAGE CCI -->
-        <details>
-            <summary>Chargée d'étude économique: Stagiaire</summary>
-            <p><a href="https://www.nouvelle-aquitaine.cci.fr/" target="_blank"> Chambre des Commerces et de l'Industrie de la région Nouvelle-Aquitaine </a></p>
-            <p>Mars 2025- Septembre 2025</p>
-            <p>Au sein de la CCI Nouvelle-Aquitaine, j’ai participé aux travaux de veille économique et d’appui au commerce international. J’ai contribué à l’analyse des dynamiques territoriales et sectorielles en mobilisant des données socio-économiques régionales (entreprises, flux commerciaux, attractivité locale). Le stage m’a permis de collecter, structurer et interpréter ces données afin de produire des indicateurs et tableaux de bord destinés à éclairer les décisions d’accompagnement des entreprises. J’ai également contribué à la préparation de notes de synthèse et profils économiques territoriaux, en mettant en lien tissu économique, zones de chalandise et opportunités d’export. Cette expérience m’a donné une première approche concrète de l’analyse territoriale et m’a appris à transformer l’information brute en éléments d’aide à la décision.</p>
+        <details class="subproject">
+            <summary>Les cartes de crédit</summary>
+            <p>Étude simple et vulgarisée présentant les avantages et inconvénients des cartes de crédit.</p>
+
+            <a class="pdf-link" href="Documents/carte de credit.pdf" target="_blank">📄 Voir le projet</a>
         </details>
-
-        <br>
-
-        <!-- STAGE APO -->
-        <details>
-            <summary> Etude de marché : Stagiaire </summary>
-            <p><a href="https://apo-oleron.fr/" target="_blank"> Atelier Protégé d'Oléron - ATASH</a></p>
-            <p>Mai 2024- Juin 2024 </p>
-            <p>Au sein d’APO, j’ai participé à la réalisation d’études de marché du secteur de la restauration (Traiteur, repas à domicile et cantines scolaire), l'objectif était de faire un positionnement APO par rapport à ces concurrent. Mon rôle consistait à collecter et structurer des données issues de différentes sources (enquêtes, bases socio-économiques, observation concurrentielle), puis à analyser ces informations afin d’identifier des tendances, des profils de clientèle et des facteurs d’attractivité. J’ai contribué à la rédaction de synthèses et d’enseignements marché permettant d’orienter le positionnement produit et les actions commerciales. Cette expérience m’a initiée à la logique “donnée en insight” et m’a permis de développer une approche analytique au service du besoin métier.</p>
-        </details>
-
-        <br>
-
-        <!-- STAGE VISION TERRA -->
-        <details>
-            <summary> Modélisation spatiale </summary>
-            <p><a href="https://www.visioterra.fr/web/" target="_blank"> Visio Terra</a></p>
-            <p>Mai 2022- Juillet 2022 </p>
-            <p>Recherche et modélisation des chemins de transhumance au Tchad.</p>
-        </details>
-
-    </details>
-
-    <!-- SECTION 4 — COMPÉTENCES -->
-    <details>
-        <summary>Et si ...</summary>
-        <ul>
-            <li>Analyse de données : Python, R, SQL, Excel</li>
-            <li>Économétrie et statistiques</li>
-            <li>Modélisation : GAMS, Mathematica</li>
-            <li>Datavisualisation : Power BI, Python, Excel</li>
-            <li>Économie internationale & développement</li>
-            <li>Programmation : Python, R, SQL, Matlab, GRETL</li>
-        </ul>
     </details>
 
 </div>
 
 <footer>
     <h3>Contact</h3>
-
     <div class="contact-line">
         <span>📞 +33(0)6 15 09 07 62</span>
         <span>📧 <a href="mailto:houmoukande@gmail.com">houmoukande@gmail.com</a></span>
@@ -203,7 +192,6 @@
         <span>📍 <a href="https://www.bing.com/maps/search?FORM=HDRSC6&q=linthelles" target="_blank">Linthelles (51), France</a></span>
     </div>
 </footer>
-
 
 </body>
 </html>
